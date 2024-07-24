@@ -12,7 +12,7 @@ export default function SideMenu(){
       </div>
       <ul className="flex-grow">
         <MenuItem url="/" text="Início" icon={<Home/>}/>
-        <MenuItem url="settings" text="Ajustes" icon={<Settings />}/>
+        <MenuItem url="/settings" text="Ajustes" icon={<Settings />}/>
         <MenuItem url="/notifications" text="Notificações" icon={<BellRing />}/>
       </ul>
       <ul>

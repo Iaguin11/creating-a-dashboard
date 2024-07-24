@@ -12,7 +12,7 @@ interface MenuItemProps {
 export default function MenuItem({text,icon,url,className, onClick}:MenuItemProps){
   function renderLink(){
     return( 
-      <Link href='/' className={`flex flex-col justify-center items-center h-20 w-20 dark:text-gray-200 ${className}` }>
+      <Link href={`${url}`} className={`flex flex-col justify-center items-center h-20 w-20 dark:text-gray-200 ${className}` }>
         {icon}
         <span className="text-xs font-light">
           {text}
