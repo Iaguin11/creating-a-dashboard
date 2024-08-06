@@ -65,6 +65,7 @@ export function LoginForm(){
                       type="password"
                     />
                   </FormControl>
+                  <FormMessage />
                   <Button
                     size="sm"
                     variant="link"
@@ -73,7 +74,6 @@ export function LoginForm(){
                   >
                     <Link href="/">Esqueceu sua senha?</Link>
                   </Button>
-                  <FormMessage />
                 </FormItem>
               )}
             />
