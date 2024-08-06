@@ -1,8 +1,9 @@
 import { LoginForm } from "@/components/login-user/login-form";
-import { Social } from "@/components/login-user/social";
 import Link from "next/link";
 
 export default function LoginUser(){
+
+
   return(
     <div className="relative h-screen flex-col items-center justify-center md:grid bg-gradient-to-b to-[#F1F2FB] from-black/10 ">
       <div className="p-4 lg:p-8 h-full flex items-center">
@@ -12,7 +13,7 @@ export default function LoginUser(){
             <p className="text-sm text-muted-foreground">Insira seu e-mail e senha abaixo</p>
           </div>
           <LoginForm />
-          <Social />
+  
           <p className="text-sm text-center text-foreground">
             Não tem uma conta?{" "}
             <Link href="/register" className="underline underline-offset-4 hover:text-gray-500">
