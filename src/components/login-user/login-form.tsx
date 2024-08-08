@@ -34,13 +34,12 @@ export function LoginForm(){
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel className="text-black">Email</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
-                      className="px-4 py-3 rounded-lg mt-2 border
-                     focus:border-blue-500 focus:bg-white 
-                      focus:outline-none"  
+                      className="px-4 py-3 rounded-lg mt-2 text-black dark:bg-white border-white
+                     focus:bg-white focus:outline-none"  
                       placeholder="example@gmail.com"
                       type="email"
                     />
@@ -54,13 +53,12 @@ export function LoginForm(){
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Senha</FormLabel>
+                  <FormLabel className="text-black">Senha</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
-                      className="px-4 py-3 rounded-lg mt-2 border
-                     focus:border-blue-500 focus:bg-white 
-                      focus:outline-none"  
+                      className="px-4 py-3 rounded-lg mt-2 text-black dark:bg-white border-white
+                     focus:bg-white focus:outline-none"  
                       placeholder="****"
                       type="password"
                     />

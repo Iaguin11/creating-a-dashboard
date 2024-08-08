@@ -7,9 +7,9 @@ export default function UnAuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="grid grid-cols-2 h-screen">
+    <main className="grid grid-cols-2 h-screen bg-white">
       <div className="flex justify-center">
-          <div className="space-y-2 place-content-center flex flex-col justify-center">
+          <div className="space-y-2 place-content-center flex flex-col justify-center ">
             <div className="flex w-full -mb-14 justify-center">
               <Image 
                 alt="logo"
@@ -19,7 +19,7 @@ export default function UnAuthLayout({
                 className="w-[440px]"
               />
             </div>
-            <h1 className="mb-4 text-2xl text-center font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-4xl">
+            <h1 className="mb-4 text-2xl text-center font-extrabold text-white dark:text-black md:text-3xl lg:text-4xl">
               Melhor{" "}
               <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
                 Jeito

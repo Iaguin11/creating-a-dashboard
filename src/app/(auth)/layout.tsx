@@ -14,7 +14,7 @@ export default function AuthLayout({children}: Readonly<{children: React.ReactNo
   return(
    <main className="flex flex-col">
       <aside className="flex justify-between h-screen">
-        <div className="flex basis-80 pb-6 flex-col justify-between bg-stone-200/50">
+        <div className="flex basis-80 pb-6 flex-col justify-between bg-stone-200/50 ">
           <Header title="Page" subtitle="adim"/>
           <Menu.Root>
               <AvatarUser />
@@ -25,10 +25,10 @@ export default function AuthLayout({children}: Readonly<{children: React.ReactNo
 
               <Menu.Navbar>
                 <Menu.title>Usuários</Menu.title>
-                <div className="flex flex-col items-start p-2 pb-16 space-y-2">
+                <div className="flex flex-col items-start p-2 pb-16 space-y-2  ">
                   <Menu.ActiveLink href="/dashboard">Home</Menu.ActiveLink>
-                  <Menu.ActiveLink href="/settings">Ver Colaboradores</Menu.ActiveLink>
-                  <Menu.ActiveLink href="/notifications">Notificações</Menu.ActiveLink>
+                  <Menu.ActiveLink href="/register-users">Cadastrar usuário</Menu.ActiveLink>
+                  <Menu.ActiveLink href="/view-users">Ver usuários</Menu.ActiveLink>
                 </div>
               </Menu.Navbar>
               <div className="">
@@ -42,7 +42,7 @@ export default function AuthLayout({children}: Readonly<{children: React.ReactNo
               </div>
           </Menu.Root>
         </div>
-        <section className="basis-full bg-secondary/80 px-16 py-10">
+        <section className="basis-full px-16 py-10">
           {children}
         </section>
       </aside>

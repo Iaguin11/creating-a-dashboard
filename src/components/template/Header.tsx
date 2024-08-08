@@ -1,7 +1,7 @@
 'use client'
 import useApp from "@/hook/useApp";
-import ThemeButton from "./ThemeButton";
 import Title from "./Title";
+import { ModeToggle } from "../theme/theme-toggle";
 
 interface HeaderProps {
   title: string
@@ -15,7 +15,7 @@ export default function Header({title, subtitle }: HeaderProps){
     <div className="flex">
       <Title title={title} subtitle={subtitle}/>
       <div className={`flex flex-grow justify-end items-center`}>
-        <ThemeButton theme={theme ?? 'dark'} switchTheme={handleSwitchTheme}/>
+        <ModeToggle />
       </div>
     </div>
   )

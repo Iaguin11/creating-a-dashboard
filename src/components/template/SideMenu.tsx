@@ -12,7 +12,7 @@ export default function SideMenu(){
   const { logout } = useAuth()
   return(
     <aside className="flex justify-between h-screen">
-      <div className="flex basis-80 pb-6 flex-col justify-between bg-stone-200/50">
+      <div className="flex basis-80 pb-6 flex-col justify-between">
         <Menu.Root>
             <AvatarUser />
             <Button className="flex items-center gap-2 w-full text-primary" variant="outline">

@@ -15,7 +15,7 @@ export function MenuActiveLink({ href, children, ...rest }: MenuActiveLinkProps)
   return (
     <Link
       href={href}
-      className={`${isActive ? 'bg-stone-50 w-[225px] px-2 rounded text-primary hover:text-foreground' : 'px-2 text-muted-foreground'}`}
+      className={`${isActive ? ' bg-stone-50  w-[225px] px-2 rounded text-primary hover:text-foreground' : 'px-2 text-muted-foreground'}`}
       {...rest}
     >
       {children}

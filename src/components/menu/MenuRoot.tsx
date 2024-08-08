@@ -6,7 +6,7 @@ interface MenuRootProps {
 
 export function MenuRoot({ children }: MenuRootProps) {
   return (
-    <div className="p-6 space-y-9">
+    <div className="p-6 space-y-9 ">
       {children}
     </div>
   )

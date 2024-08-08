@@ -6,7 +6,7 @@ interface ContentHeaderRootProps {
 
 export function ContentHeaderRoot({ children }: ContentHeaderRootProps) {
   return (
-    <header className="w-full rounded-lg bg-primary text-white py-6 px-12 space-y-4">
+    <header className="w-full bg-slate-800/85 rounded-lg border text-white py-6 px-12 space-y-4">
       {children}
     </header>
   )
