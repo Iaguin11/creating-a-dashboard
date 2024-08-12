@@ -17,7 +17,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 import { cn } from "@/lib/utils";
 
-import {registerSchema2} from './schemaUser'
+import {registerSchemaUser} from './schemaUser'
 import { Button } from "@/components/ui/button";
 import { AddressType } from "@/components/register-form/register-form";
 
@@ -46,8 +46,8 @@ export default function RegisterFormClient(){
   const [selectedCity, setSelectedCity] = useState("")
 
 
-  const form = useForm<z.infer<typeof registerSchema2>>({
-    resolver: zodResolver(registerSchema2),
+  const form = useForm<z.infer<typeof registerSchemaUser>>({
+    resolver: zodResolver(registerSchemaUser),
     defaultValues: {
       fullName: "",
       socialName: "",
@@ -125,7 +125,7 @@ export default function RegisterFormClient(){
    setSelectedCity("0")
   }
 
-  function onSubmit(data: z.infer<typeof registerSchema2>){
+  function onSubmit(data: z.infer<typeof registerSchemaUser>){
     const formData = JSON.stringify(data)
     localStorage.setItem('formData', formData)
     form.reset()

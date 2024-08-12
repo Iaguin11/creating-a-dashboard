@@ -1,51 +1,42 @@
-"use client"
-import { Menu } from "@/components/menu/indx";
-import AvatarUser from "@/components/template/AvatarUser";
-import Header from "@/components/template/Header";
-import MenuItem from "@/components/template/MenuItem";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hook/useAuth";
-import { BellRing, LogOut } from "lucide-react";
+import Image from "next/image";
+import sapiens from "../../../public/sapiens.svg"
 
-
-
-export default function AuthLayout({children}: Readonly<{children: React.ReactNode}>){
-  const { logout } = useAuth()
-  return(
-   <main className="flex flex-col">
-      <aside className="flex justify-between h-screen">
-        <div className="flex basis-80 pb-6 flex-col justify-between bg-stone-200/50 ">
-          <Header title="Page" subtitle="adim"/>
-          <Menu.Root>
-              <AvatarUser />
-              <Button className="flex items-center gap-2 w-full text-primary" variant="outline">
-                <BellRing size={16} className="text-primary"/>
-                <span>Tem novidade</span>
-              </Button>
-
-              <Menu.Navbar>
-                <Menu.title>Usuários</Menu.title>
-                <div className="flex flex-col items-start p-2 pb-16 space-y-2  ">
-                  <Menu.ActiveLink href="/dashboard">Home</Menu.ActiveLink>
-                  <Menu.ActiveLink href="/register-users">Cadastrar usuário</Menu.ActiveLink>
-                  <Menu.ActiveLink href="/view-users">Ver usuários</Menu.ActiveLink>
-                </div>
-              </Menu.Navbar>
-              <div className="">
-              <MenuItem text="Sair" icon={<LogOut/>} onClick={logout}
-                className={`
-                  text-red-600 dark:text-red-400
-                  hover:bg-red-400 hover:text-white
-                  dark:hover:text-white
-                  `}
-                />
-              </div>
-          </Menu.Root>
+export default function UnAuthLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <main className="grid grid-cols-2 h-screen bg-white">
+      <div className="flex justify-center">
+          <div className="space-y-2 place-content-center flex flex-col justify-center ">
+            <div className="flex w-full -mb-14 justify-center">
+              <Image 
+                alt="logo"
+                width={600}
+                height={600}
+                src={sapiens}
+                className="w-[440px]"
+              />
+            </div>
+            <h1 className="mb-4 text-2xl text-center font-extrabold text-white dark:text-black md:text-3xl lg:text-4xl">
+              Melhor{" "}
+              <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
+                Jeito
+              </span>
+              <br />
+              de{" "}
+              <span className="inline bg-gradient-to-r from-[#5797d6] via-[#1fc0f1] to-[#0382d7] text-transparent bg-clip-text">
+                controlar seus usuários
+              </span>{" "}
+            </h1>
+            <div className="w-[60%]">
+              <p className="text-base text-center font-normal text-muted-foreground lg:text-lg">
+              </p>
+            </div>
+          </div>
         </div>
-        <section className="basis-full px-16 py-10">
-          {children}
-        </section>
-      </aside>
-   </main>
-  )
+        {children}     
+    </main>
+  );
 }

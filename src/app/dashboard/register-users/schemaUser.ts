@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const registerSchema2 = z.object({
+export const registerSchemaUser = z.object({
   fullName: z.string().min(1, { message: "Informe seu nome completo"}).regex(/^[A-Za-záàâãéèêẽíìîĩóòôõúùûũçñ ]+$/i, "Apenas letras 'A-Z' são permitidas"),
   socialName: z.string().optional(),
   cpf: z.string()
